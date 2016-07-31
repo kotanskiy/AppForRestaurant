@@ -1,8 +1,13 @@
+package ua.goit.java.appForRestaurant.Config;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import ua.goit.java.appForRestaurant.Test;
+import ua.goit.java.appForRestaurant.model.dish.jdbc.JdbcDishDao;
+import ua.goit.java.appForRestaurant.model.employee.jdbc.JdbcEmployeeDao;
 
 import java.beans.PropertyVetoException;
 
@@ -10,10 +15,8 @@ import java.beans.PropertyVetoException;
 public class AppConfig {
 
     @Bean
-    public Test test() throws PropertyVetoException {
-        Test test = new Test();
-        test.setDataSource(comboPooledDataSource());
-        return test;
+    public Test test() {
+        return new Test();
     }
 
     @Bean
@@ -36,4 +39,20 @@ public class AppConfig {
         propertyPlaceholderConfigurer.setLocation(new ClassPathResource("jdbc.properties"));
         return propertyPlaceholderConfigurer;
     }
+
+    @Bean
+    public JdbcEmployeeDao jdbcEmployeeDao() throws PropertyVetoException {
+        JdbcEmployeeDao jdbcEmployeeDao = new JdbcEmployeeDao();
+        jdbcEmployeeDao.dataSource = comboPooledDataSource();
+        return  jdbcEmployeeDao;
+    }
+
+    @Bean
+    public JdbcDishDao jdbcDishDao() throws PropertyVetoException {
+        JdbcDishDao jdbcDishDao = new JdbcDishDao();
+        jdbcDishDao.dataSource = comboPooledDataSource();
+        return jdbcDishDao;
+    }
+
+
 }

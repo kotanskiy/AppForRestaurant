@@ -56,10 +56,18 @@ public class JdbcDishDao implements DishDao{
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM dish WHERE name = ?")) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
+            boolean flag = true;
+
             while (resultSet.next()){
                 dishes.add(create(resultSet));
+                flag = false;
             }
-            LOGGER.info("getDish successful");
+
+            if (flag){
+                throw new RuntimeException("this name is not present in the database");
+            }else {
+                LOGGER.info("get complete");
+            }
         }catch (SQLException e){
             LOGGER.error("getDish error");
             throw new RuntimeException(e);

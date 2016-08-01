@@ -6,7 +6,7 @@
 
     <groupId>ua.goit.java</groupId>
     <artifactId>restaurantApp</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 
     <build>
         <finalName>restaurantApp</finalName>
@@ -58,12 +58,6 @@
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
             <version>0.9.5.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ua.goit.java</groupId>
-            <artifactId>restaurantApp</artifactId>
-            <version>1.0</version>
         </dependency>
 
         <dependency>

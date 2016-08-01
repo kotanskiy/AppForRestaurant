@@ -8,6 +8,7 @@ import org.springframework.core.io.ClassPathResource;
 import ua.goit.java.appForRestaurant.Test;
 import ua.goit.java.appForRestaurant.model.dish.jdbc.JdbcDishDao;
 import ua.goit.java.appForRestaurant.model.employee.jdbc.JdbcEmployeeDao;
+import ua.goit.java.appForRestaurant.model.menu.jdbc.JdbcMenuDao;
 
 import java.beans.PropertyVetoException;
 
@@ -54,5 +55,11 @@ public class AppConfig {
         return jdbcDishDao;
     }
 
+    @Bean
+    public JdbcMenuDao jdbcMenuDao() throws PropertyVetoException {
+        JdbcMenuDao jdbcMenuDao = new JdbcMenuDao();
+        jdbcMenuDao.dataSource = comboPooledDataSource();
+        return jdbcMenuDao;
+    }
 
 }

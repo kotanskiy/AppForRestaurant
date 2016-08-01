@@ -58,12 +58,17 @@ public class JdbcEmployeeDao implements EmployeeDao{
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM employee WHERE name = ?")) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()){
-                while (resultSet.next()){
-                    employees.add(create(resultSet));
-                }
+            boolean flag = true;
+
+            while (resultSet.next()){
+                employees.add(create(resultSet));
+                flag = false;
+            }
+
+            if (flag){
+                throw new RuntimeException("this name is not present in the database");
             }else {
-                System.out.println("this name is not present in the database");
+                LOGGER.info("get complete");
             }
 
         }catch (SQLException e){

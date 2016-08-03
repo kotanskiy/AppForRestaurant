@@ -9,6 +9,8 @@ import ua.goit.java.appForRestaurant.Test;
 import ua.goit.java.appForRestaurant.model.dish.jdbc.JdbcDishDao;
 import ua.goit.java.appForRestaurant.model.employee.jdbc.JdbcEmployeeDao;
 import ua.goit.java.appForRestaurant.model.menu.jdbc.JdbcMenuDao;
+import ua.goit.java.appForRestaurant.model.order.jdbc.JdbcOrderDao;
+import ua.goit.java.appForRestaurant.model.ready_dish.jdbc.JdbcReadyDishDao;
 
 import java.beans.PropertyVetoException;
 
@@ -60,6 +62,20 @@ public class AppConfig {
         JdbcMenuDao jdbcMenuDao = new JdbcMenuDao();
         jdbcMenuDao.dataSource = comboPooledDataSource();
         return jdbcMenuDao;
+    }
+
+    @Bean
+    public JdbcOrderDao jdbcOrderDao() throws PropertyVetoException {
+        JdbcOrderDao jdbcOrderDao = new JdbcOrderDao();
+        jdbcOrderDao.dataSource = comboPooledDataSource();
+        return jdbcOrderDao;
+    }
+
+    @Bean
+    public JdbcReadyDishDao jdbcReadyDishDao() throws PropertyVetoException {
+        JdbcReadyDishDao jdbcReadyDishDao = new JdbcReadyDishDao();
+        jdbcReadyDishDao.dataSource = comboPooledDataSource();
+        return jdbcReadyDishDao;
     }
 
 }

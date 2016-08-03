@@ -13,10 +13,5 @@ public class Test {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         AppConfig config = context.getBean(AppConfig.class);
         Scanner scanner = new Scanner(System.in);
-        System.out.print("input idMenu: ");
-        int idMenu = scanner.nextInt();
-        System.out.print("input idDish: ");
-        int idDish = scanner.nextInt();
-        config.jdbcMenuDao().addDishInMenu(idMenu, idDish);
     }
 }

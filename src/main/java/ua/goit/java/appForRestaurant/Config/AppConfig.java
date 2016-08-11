@@ -1,46 +1,57 @@
-package ua.goit.java.appForRestaurant.Config;
+package ua.goit.java.appForRestaurant.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import ua.goit.java.appForRestaurant.Test;
-import ua.goit.java.appForRestaurant.model.dish.jdbc.JdbcDishDao;
-import ua.goit.java.appForRestaurant.model.employee.jdbc.JdbcEmployeeDao;
-import ua.goit.java.appForRestaurant.model.menu.jdbc.JdbcMenuDao;
-import ua.goit.java.appForRestaurant.model.order.jdbc.JdbcOrderDao;
-import ua.goit.java.appForRestaurant.model.ready_dish.jdbc.JdbcReadyDishDao;
+import org.springframework.context.annotation.PropertySource;
+import ua.goit.java.appForRestaurant.dao.model.dish.jdbc.JdbcDishDao;
+import ua.goit.java.appForRestaurant.dao.model.employee.jdbc.JdbcEmployeeDao;
+import ua.goit.java.appForRestaurant.dao.model.menu.jdbc.JdbcMenuDao;
+import ua.goit.java.appForRestaurant.dao.model.order.jdbc.JdbcOrderDao;
+import ua.goit.java.appForRestaurant.dao.model.readyDish.jdbc.JdbcReadyDishDao;
+import ua.goit.java.appForRestaurant.dao.model.store.jdbc.JdbcStoreDao;
 
 import java.beans.PropertyVetoException;
 
 @Configuration
-public class AppConfig {
+@PropertySource("classpath:jdbc.properties")
+public  class AppConfig {
 
-    @Bean
-    public Test test() {
-        return new Test();
-    }
+    @Value("${jdbc.driver.class}")
+    String jdbcDriverClass;
+
+    @Value("${jdbc.url}")
+    String jdbcUrl;
+
+    @Value("${jdbc.user}")
+    String jdbcUser;
+
+    @Value("${jdbc.password}")
+    String jdbcPassword;
+
+    @Value("${jdbc.max.connections}")
+    String jdbcMaxConnections;
+
+    @Value("${jdbc.min.connections}")
+    String jdbcMinConnections;
+
+    @Value("${jdbc.acquire.increment}")
+    String jdbcAcquireIncrement;
+
 
     @Bean
     public ComboPooledDataSource comboPooledDataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
-        dataSource.setDriverClass("org.postgresql.Driver");
-        dataSource.setJdbcUrl("jdbs:postgresql://localhost:5432/restaurant");
-        dataSource.setUser("user");
-        dataSource.setPassword("katavasia");
+        dataSource.setDriverClass(jdbcDriverClass);
+        dataSource.setJdbcUrl(jdbcUrl);
+        dataSource.setUser(jdbcUser);
+        dataSource.setPassword(jdbcPassword);
 
-        dataSource.setMinPoolSize(1);
-        dataSource.setMaxPoolSize(10);
-        dataSource.setAcquireIncrement(1);
+        dataSource.setMinPoolSize(Integer.parseInt(jdbcMinConnections));
+        dataSource.setMaxPoolSize(Integer.parseInt(jdbcMaxConnections));
+        dataSource.setAcquireIncrement(Integer.parseInt(jdbcAcquireIncrement));
         return dataSource;
-    }
-
-    @Bean
-    public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer(){
-        PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
-        propertyPlaceholderConfigurer.setLocation(new ClassPathResource("jdbc.properties"));
-        return propertyPlaceholderConfigurer;
     }
 
     @Bean
@@ -76,6 +87,13 @@ public class AppConfig {
         JdbcReadyDishDao jdbcReadyDishDao = new JdbcReadyDishDao();
         jdbcReadyDishDao.dataSource = comboPooledDataSource();
         return jdbcReadyDishDao;
+    }
+
+    @Bean
+    public JdbcStoreDao jdbcStoreDao() throws PropertyVetoException {
+        JdbcStoreDao jdbcStoreDao = new JdbcStoreDao();
+        jdbcStoreDao.dataSource = comboPooledDataSource();
+        return jdbcStoreDao;
     }
 
 }

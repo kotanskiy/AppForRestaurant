@@ -2,7 +2,7 @@ package ua.goit.java.appForRestaurant;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ua.goit.java.appForRestaurant.Config.AppConfig;
+import ua.goit.java.appForRestaurant.config.AppConfig;
 
 import java.beans.PropertyVetoException;
 import java.sql.SQLException;
@@ -13,5 +13,6 @@ public class Test {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         AppConfig config = context.getBean(AppConfig.class);
         Scanner scanner = new Scanner(System.in);
+        System.out.println(config.jdbcEmployeeDao().getAll().toString());
     }
 }

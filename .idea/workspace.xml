@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfd93ef-08b0-4e0f-bd2c-a16a6b90d34f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/RunnerForConsole.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/RunnerForGuiWithJavaFX.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/app/EmployeesService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/config/SpringFXMLLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/Command.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/Parser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/dish/AddDish.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/dish/DeleteDish.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/dish/FindDishByName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/dish/GetAllDishes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/employee/AddEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/employee/DeleteEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/employee/FindEmployeeByName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/employee/GetAllEmployees.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/AddDishMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/CreateMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/DeleteDishMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/DeleteMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/FindMenuByName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/menu/GetAllMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/orders/CreateOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/console/comands/orders/GetAllOrders.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/gui/AbstractController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/gui/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/gui/EditEmployeeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/gui/MainController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/gui/TestController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/addEmployee.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/app.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/editEmployee.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/Test.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/Config/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/Config/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/employee/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/employee/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/employee/jdbc/JdbcEmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/employee/jdbc/JdbcEmployeeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/order/OrderDao.java" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/order/OrderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/order/jdbc/JdbcOrderDao.java" afterPath="$PROJECT_DIR$/src/main/java/ua/goit/java/appForRestaurant/dao/model/order/jdbc/JdbcOrderDao.java" />
     </list>
     <ignored path="appForModule6.2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -754,7 +717,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470936679438</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add version for console">
+      <created>1472921775818</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1472921775818</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -806,7 +775,8 @@
     <MESSAGE value="add model menu with all methods" />
     <MESSAGE value="add order and readyDish methods" />
     <MESSAGE value="add jdbc.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jdbc.properties" />
+    <MESSAGE value="add version for console" />
+    <option name="LAST_COMMIT_MESSAGE" value="add version for console" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -893,6 +863,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5801011">
           <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,6 +893,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11467116">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -929,6 +901,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1194#1195#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -957,6 +933,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,6 +941,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45868465">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -971,6 +949,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3153457">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

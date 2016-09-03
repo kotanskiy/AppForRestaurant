@@ -9,4 +9,5 @@ public interface OrderDao {
     public void addDishInOrder(int idOrder,int idDish);
     public void deleteDishInOrder(int idOrder, int idDish);
     public List<Order> getOpenOrCloseOrders(boolean state);
+    public List<Order> getAllOrders();
 }

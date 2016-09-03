@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.goit.java.appForRestaurant.gui.EditEmployeeController">
+    <children>
+        <Button fx:id="btnEdit" layoutX="288.0" layoutY="248.0" mnemonicParsing="false" onAction="#addEmployee" text="Добавить" />
+        <TextField fx:id="addname" layoutX="129.0" layoutY="14.0" prefHeight="25.0" prefWidth="228.0" />
+        <TextField fx:id="addsurname" layoutX="129.0" layoutY="51.0" prefHeight="25.0" prefWidth="228.0" />
+        <TextField fx:id="adddate" layoutX="129.0" layoutY="93.0" prefHeight="25.0" prefWidth="228.0" />
+        <TextField fx:id="addposition" layoutX="129.0" layoutY="128.0" prefHeight="25.0" prefWidth="228.0" />
+        <TextField fx:id="addsalary" layoutX="129.0" layoutY="166.0" prefHeight="25.0" prefWidth="228.0" />
+        <TextField fx:id="addphone" layoutX="129.0" layoutY="203.0" prefHeight="25.0" prefWidth="228.0" />
+        <Text layoutX="92.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя:" wrappingWidth="28.05078125" />
+        <Text layoutX="66.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия:" />
+        <Text layoutX="31.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения:" wrappingWidth="88.55078125" />
+        <Text layoutX="67.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Позиция:" />
+        <Text layoutX="66.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Зарплата:" />
+        <Text layoutX="25.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона:" wrappingWidth="100.28515625" />
+    </children>
+</Pane>

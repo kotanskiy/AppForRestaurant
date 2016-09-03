@@ -11,6 +11,20 @@ public class Employee {
     private float salary;
     private String phone;
 
+    public Employee(){
+
+    }
+
+    public Employee(int id, String phone, float salary, String name, String surname, String dataBirth, String position) {
+        this.id = id;
+        this.phone = phone;
+        this.salary = salary;
+        this.name = name;
+        this.surname = surname;
+        this.dataBirth = dataBirth;
+        this.position = position;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

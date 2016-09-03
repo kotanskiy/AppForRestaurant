@@ -198,6 +198,24 @@ public class JdbcOrderDao implements OrderDao {
         return orders;
     }
 
+    @Transactional
+    @Override
+    public List<Order> getAllOrders() {
+        List<Order> orders = new ArrayList<>();
+        try(Connection connection = dataSource.getConnection();
+        Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM customer_order");
+
+            while (resultSet.next()){
+                orders.add(createOrder(resultSet));
+            }
+        }catch (SQLException e){
+            LOGGER.error("getAllOrders error");
+            throw new RuntimeException(e);
+        }
+        return orders;
+    }
+
     private Order createOrder(ResultSet resultSet) throws SQLException {
         Order order = new Order();
         order.setId(resultSet.getInt("id"));

@@ -108,11 +108,8 @@ public class JdbcEmployeeDao implements EmployeeDao{
         try(Connection connection = dataSource.getConnection();
         PreparedStatement statement = connection.prepareStatement("DELETE FROM employee WHERE id = ?")) {
             statement.setInt(1, id);
-            if (statement.execute()){
-                LOGGER.info("Delete complete");
-            }else {
-                LOGGER.error("this id is not present in database");
-            }
+            statement.execute();
+            LOGGER.info("Delete complete");
         }catch (SQLException e){
             LOGGER.error("invalid connection");
             throw new RuntimeException(e);

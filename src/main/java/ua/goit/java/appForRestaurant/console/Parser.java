@@ -28,7 +28,7 @@ public class Parser {
                     try{
                         parse(str);
                     }catch (Exception e){
-                        System.err.println("Input Error");
+                        System.err.println("Error");
                     }
                 }
             }

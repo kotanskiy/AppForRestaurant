@@ -98,7 +98,7 @@ public class JdbcEmployeeDao implements EmployeeDao{
             LOGGER.info("add successful");
         }catch (SQLException e){
             LOGGER.error("invalid connection");
-            throw new RuntimeException(e);
+            throw new RuntimeException("invalid input data");
         }
     }
 

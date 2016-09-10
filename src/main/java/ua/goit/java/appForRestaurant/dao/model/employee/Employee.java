@@ -1,14 +1,35 @@
 package ua.goit.java.appForRestaurant.dao.model.employee;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.beans.PropertyVetoException;
 
+@Entity
+@Table(name = "employee")
 public class Employee {
+
+    @Id
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "surname")
     private String surname;
+
+    @Column(name = "date_birth")
     private String dataBirth;
+
+    @Column(name = "position")
     private String position;
+
+    @Column(name = "salary")
     private float salary;
+
+    @Column(name = "phone")
     private String phone;
 
     public Employee(){

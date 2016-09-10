@@ -48,8 +48,14 @@ public class JdbcOrderDao implements OrderDao {
 
             if (state.getBoolean("state")){
                 statement.setInt(1, idOrder);
-                statement.execute();
-                LOGGER.info("delete successful");
+                if (statement.execute()){
+                    LOGGER.info("delete successful");
+                }else {
+                    LOGGER.error("this order with id is not exist");
+                    throw new RuntimeException("this order with id is not exist");
+                }
+
+
             }else {
                 LOGGER.error("this order is close");
                 throw new RuntimeException("this order is close");

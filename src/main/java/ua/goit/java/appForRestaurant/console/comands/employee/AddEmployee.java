@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AddEmployee implements Command {
+
     private EmployeeDao employeeDao;
 
     public EmployeeDao getEmployeeDao() {

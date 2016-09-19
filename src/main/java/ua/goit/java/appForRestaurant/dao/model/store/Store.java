@@ -1,7 +1,18 @@
 package ua.goit.java.appForRestaurant.dao.model.store;
 
-public class Store {
-    private int idIngredient;
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "store")
+public class Store implements Serializable{
+
+    @Id
+    @OneToOne
+    @JoinColumn(name = "id_ingredient")
+    private Ingredient idIngredient;
+
+    @Column(name = "count")
     private int count;
 
     @Override
@@ -12,11 +23,12 @@ public class Store {
                 '}';
     }
 
-    public int getIdIngredient() {
+
+    public Ingredient getIdIngredient() {
         return idIngredient;
     }
 
-    public void setIdIngredient(int idIngredient) {
+    public void setIdIngredient(Ingredient idIngredient) {
         this.idIngredient = idIngredient;
     }
 

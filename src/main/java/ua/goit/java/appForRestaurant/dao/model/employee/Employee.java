@@ -1,9 +1,8 @@
 package ua.goit.java.appForRestaurant.dao.model.employee;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.beans.PropertyVetoException;
 
 @Entity
@@ -11,6 +10,8 @@ import java.beans.PropertyVetoException;
 public class Employee {
 
     @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     @Column(name = "id")
     private int id;
 

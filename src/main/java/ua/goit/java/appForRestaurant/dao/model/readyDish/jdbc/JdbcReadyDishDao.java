@@ -10,13 +10,14 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-public class JdbcReadyDishDao implements ReadyDishDao {
+/*
+public class JdbcReadyDishDao implements ReadyDishDao{
 
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JdbcReadyDishDao.class);
 
     public DataSource dataSource;
+
 
     private ReadyDish create(ResultSet resultSet) throws SQLException {
         ReadyDish readyDish = new ReadyDish();
@@ -71,3 +72,4 @@ public class JdbcReadyDishDao implements ReadyDishDao {
         return readyDishes;
     }
 }
+*/

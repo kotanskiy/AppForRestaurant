@@ -50,7 +50,7 @@ public class EmployeesService {
         employeeDao.add(e);
         return true;
     }
-
+/*
     public ObservableList<Employee> getEmploeesByName(String name){
         name = name.trim();
         ObservableList<Employee> employees = FXCollections.observableArrayList();
@@ -61,5 +61,5 @@ public class EmployeesService {
    public void deleteEmployee(int id){
        employeeDao.delete(id);
    }
-
+*/
 }

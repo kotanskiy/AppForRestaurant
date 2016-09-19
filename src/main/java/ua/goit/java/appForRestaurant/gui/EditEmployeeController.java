@@ -81,6 +81,7 @@ public class EditEmployeeController {
         }
     }
 
+    /*
     @FXML
     public void editEmployee(ActionEvent actionEvent) throws PropertyVetoException {
         try {
@@ -92,7 +93,7 @@ public class EditEmployeeController {
         }
 
     }
-
+*/
     public MainController getController() {
         return controller;
     }

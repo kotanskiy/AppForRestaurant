@@ -1,16 +1,6 @@
 package ua.goit.java.appForRestaurant.dao.model.store.jdbc;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.transaction.annotation.Transactional;
-import ua.goit.java.appForRestaurant.dao.model.store.Ingredient;
-import ua.goit.java.appForRestaurant.dao.model.store.StoreDao;
-
-import javax.sql.DataSource;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
+/*
 public class JdbcStoreDao implements StoreDao{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JdbcStoreDao.class);
@@ -183,4 +173,4 @@ public class JdbcStoreDao implements StoreDao{
         ingredient.setName(resultSet.getString("name"));
         return ingredient;
     }
-}
+}*/

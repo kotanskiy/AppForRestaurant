@@ -1,6 +1,7 @@
 package ua.goit.java.appForRestaurant.console.comands.employee;
 
 import ua.goit.java.appForRestaurant.console.Command;
+import ua.goit.java.appForRestaurant.dao.model.employee.Employee;
 import ua.goit.java.appForRestaurant.dao.model.employee.EmployeeDao;
 
 import java.beans.PropertyVetoException;
@@ -29,6 +30,7 @@ public class DeleteEmployee implements Command{
 
     @Override
     public void run() throws PropertyVetoException {
+        Employee employee = new Employee();
         employeeDao.delete(anyEmployee());
     }
 

@@ -1,11 +1,48 @@
 package ua.goit.java.appForRestaurant.dao.model.dish;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "dish")
 public class Dish {
+
+
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "category")
     private String category;
+
+    @Column(name = "cost_of")
     private float costOf;
+
+    @Column(name = "weight")
     private float weight;
+
+    @ManyToMany
+    @JoinTable(
+            name = "ingredients_in_dishes",
+            inverseJoinColumns = @JoinColumn(name = "id_dish"),
+            joinColumns = @JoinColumn(name = "id_ingredient")
+    )
+    private List<Dish> ingredientsInDish;
+
+    public List<Dish> getIngredientsInDish() {
+        return ingredientsInDish;
+    }
+
+    public void setIngredientsInDish(List<Dish> ingredientsInDish) {
+        this.ingredientsInDish = ingredientsInDish;
+    }
 
     public int getId() {
         return id;

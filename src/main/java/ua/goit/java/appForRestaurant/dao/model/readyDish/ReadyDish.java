@@ -1,11 +1,37 @@
 package ua.goit.java.appForRestaurant.dao.model.readyDish;
 
+
+import org.hibernate.annotations.GenericGenerator;
+import ua.goit.java.appForRestaurant.dao.model.dish.Dish;
+import ua.goit.java.appForRestaurant.dao.model.employee.Employee;
+import ua.goit.java.appForRestaurant.dao.model.order.Order;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ready_dishes")
 public class ReadyDish {
+
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "id")
     private int id;
-    private int idDish;
-    private int idEmployee;
-    private int idOrder;
-    private String readyDate;
+
+    @ManyToOne
+    @JoinColumn(name = "id_dish")
+    private Dish idDish;
+
+    @ManyToOne
+    @JoinColumn(name = "id_employee")
+    private Employee idEmployee;
+
+    @ManyToOne
+    @JoinColumn(name = "id_order")
+    private Order idOrder;
+
+//    @Column(name = "ready_date")
+//    private String readyDate;
 
     @Override
     public String toString() {
@@ -14,7 +40,7 @@ public class ReadyDish {
                 ", idDish=" + idDish +
                 ", idEmployee=" + idEmployee +
                 ", idOrder=" + idOrder +
-                ", readyDate='" + readyDate + '\'' +
+              //  ", readyDate='" + readyDate + '\'' +
                 '}';
     }
 
@@ -26,35 +52,34 @@ public class ReadyDish {
         this.id = id;
     }
 
-    public String getReadyDate() {
-        return readyDate;
-    }
+   // public String getReadyDate() {
+     //   return readyDate;
+    //}
 
-    public void setReadyDate(String readyDate) {
-        this.readyDate = readyDate;
-    }
-
-    public int getIdOrder() {
-        return idOrder;
-    }
-
-    public void setIdOrder(int idOrder) {
-        this.idOrder = idOrder;
-    }
-
-    public int getIdEmployee() {
-        return idEmployee;
-    }
-
-    public void setIdEmployee(int idEmployee) {
-        this.idEmployee = idEmployee;
-    }
-
-    public int getIdDish() {
+//    public void setReadyDate(String readyDate) {
+//        this.readyDate = readyDate;
+//    }
+    public Dish getIdDish() {
         return idDish;
     }
 
-    public void setIdDish(int idDish) {
+    public void setIdDish(Dish idDish) {
         this.idDish = idDish;
+    }
+
+    public Employee getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(Employee idEmployee) {
+        this.idEmployee = idEmployee;
+    }
+
+    public Order getIdOrder() {
+        return idOrder;
+    }
+
+    public void setIdOrder(Order idOrder) {
+        this.idOrder = idOrder;
     }
 }

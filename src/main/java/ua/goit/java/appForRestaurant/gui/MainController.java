@@ -133,7 +133,7 @@ public class MainController extends AbstractController implements Controller{
             stage.show();
         }
     }
-
+/*
     @FXML
     public void getEmployeeByName(ActionEvent actionEvent) {
         try {
@@ -143,7 +143,7 @@ public class MainController extends AbstractController implements Controller{
             showErrorDialog("Ошибка", "Такого сотрудника нету в базе: " + e.getMessage());
         }
     }
-
+*/
     @FXML
     public void showInfoDialog(String title, String text){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -189,6 +189,7 @@ public class MainController extends AbstractController implements Controller{
         this.editEmployeeController = editEmployeeController;
     }
 
+    /*
     @FXML
     public void deleteEmployee(ActionEvent actionEvent) {
         e = tableEmployees.getSelectionModel().getSelectedItem();
@@ -203,4 +204,5 @@ public class MainController extends AbstractController implements Controller{
             }
         }
     }
+    */
 }

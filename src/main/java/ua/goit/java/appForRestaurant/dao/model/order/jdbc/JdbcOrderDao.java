@@ -1,16 +1,6 @@
 package ua.goit.java.appForRestaurant.dao.model.order.jdbc;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.transaction.annotation.Transactional;
-import ua.goit.java.appForRestaurant.dao.model.order.Order;
-import ua.goit.java.appForRestaurant.dao.model.order.OrderDao;
-
-import javax.sql.DataSource;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
+/*
 public class JdbcOrderDao implements OrderDao {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JdbcOrderDao.class);
@@ -232,3 +222,4 @@ public class JdbcOrderDao implements OrderDao {
         return order;
     }
 }
+*/

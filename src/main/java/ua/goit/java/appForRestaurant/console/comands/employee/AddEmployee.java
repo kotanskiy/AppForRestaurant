@@ -5,9 +5,8 @@ import ua.goit.java.appForRestaurant.dao.model.employee.Employee;
 import ua.goit.java.appForRestaurant.dao.model.employee.EmployeeDao;
 
 import java.beans.PropertyVetoException;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Scanner;
+
 
 public class AddEmployee implements Command {
 
@@ -28,7 +27,7 @@ public class AddEmployee implements Command {
 
     @Override
     public void run() throws PropertyVetoException {
-        Employee employee = createEmployeeWithId();
+        Employee employee = new Employee();
         employee = fillingEmployee(employee);
         employeeDao.add(employee);
     }
@@ -50,7 +49,7 @@ public class AddEmployee implements Command {
         employee.setPhone(scanner.nextLine().trim());
         return employee;
     }
-
+/*
     private Employee createEmployeeWithId() throws PropertyVetoException {
         Employee e = new Employee();
         List<Employee> employees = employeeDao.getAll();
@@ -71,4 +70,6 @@ public class AddEmployee implements Command {
         e.setId(id);
         return e;
     }
+
+    */
 }

@@ -11,7 +11,6 @@ public class RunnerForConsole {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         AppConfig config = context.getBean(AppConfig.class);
         System.out.println("__________________App for restaurant(version for console)___________________");
-        //config.jdbcEmployeeDao().add(new Employee(25, "+34343553", 203032.0F, "lalka", "dsdsdsdsd", "199109-23", "waiter"));
         config.parser().run();
     }
 }

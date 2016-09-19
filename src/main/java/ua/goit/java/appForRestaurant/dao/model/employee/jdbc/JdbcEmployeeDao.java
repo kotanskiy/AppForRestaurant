@@ -36,7 +36,6 @@ public class JdbcEmployeeDao implements EmployeeDao{
         List<Employee> employees = new ArrayList<>();
         try(Connection connection = dataSource.getConnection();
             Statement statement = connection.createStatement()){
-            LOGGER.info("connection successful");
             ResultSet resultSet = statement.executeQuery("SELECT * FROM employee");
             while (resultSet.next()){
                 employees.add(create(resultSet));
